@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.wagyourtail.kickassanime" name="KickAssAnime" version="0.0.1" provider-name="Wagyourtail">
+<addon id="plugin.wagyourtail.kickassanime" name="KickAssAnime" version="1.0.0" provider-name="Wagyourtail">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
         <import addon="script.module.routing" version="0.2.0"/>
-
+        <import addon="script.module.simplejson" version="3.16.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">play anime from kickassanime&#39;s collection</summary>
-        <description lang="en_GB"></description>
+        <summary lang="en_US">play anime from kickassanime&#39;s collection</summary>
+        <description lang="en_US"></description>
         <language></language>
         <platform>all</platform>
         <license>MPL-2.0</license>
