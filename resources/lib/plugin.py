@@ -61,7 +61,7 @@ def show_new(dubsub, page):
         li = ListItem("({0}) - {1} - [LIGHT]Ep {2}[/LIGHT]".format(item["type"], item["name"].replace("(Dub)", "").encode('ascii', errors='replace'), item["episode"]))
         li.setArt({'poster':"https://www.kickassanime.rs/uploads/{0}".format(item["poster"])})
         slug = item["slug"].split("/")
-        addDirectoryItem(plugin.handle, plugin.url_for(show_episode, slug[1], slug[2]), li, True)
+        addDirectoryItem(plugin.handle, plugin.url_for(show_episode, slug[-2], slug[-1]), li, True)
     if init:
         endOfDirectory(plugin.handle)
     else:
@@ -121,7 +121,7 @@ def show_anime(anime_slug):
         slug = ep["slug"].split("/")
         li = ListItem("{0} - {1}".format(ep["createddate"][:10], ep["epnum"]))
         li.setArt({'poster':"https://www.kickassanime.rs/uploads/{0}".format(anime["image"])})
-        addDirectoryItem(plugin.handle, plugin.url_for(show_episode, anime_slug, slug[3]), li, True)
+        addDirectoryItem(plugin.handle, plugin.url_for(show_episode, anime_slug, slug[-1]), li, True)
     endOfDirectory(plugin.handle)
 
 #-- episode --#
